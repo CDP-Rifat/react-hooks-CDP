@@ -18,8 +18,7 @@ function PostPage() {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [])
-    console.log(comments)
+    }, [post.id])
     return (
         <div className="post-container">
             <Post post={post} />

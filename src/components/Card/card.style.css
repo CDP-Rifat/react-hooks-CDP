@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     color: rgb(32, 32, 32);
-    background-color: rgb(250, 250, 250);
-    border: 2px solid #fa1c39;
+    background-color: rgb(247, 247, 247);
+    border: 1.9px solid #ffb1bb;
     border-radius: 5px;
     padding: 25px;
     backface-visibility: hidden;
@@ -16,3 +16,6 @@
     z-index: 1;
 }
 
+.card>h2 {
+    color: rgb(255, 71, 71);
+}
