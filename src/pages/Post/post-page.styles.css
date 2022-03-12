@@ -1,0 +1,10 @@
+.post-container {
+    margin: 40px 15em;
+}
+
+.comments-container {
+    display: flex;
+    gap: 15px;
+    justify-content: centers;
+    flex-direction: column;
+}

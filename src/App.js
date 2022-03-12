@@ -12,7 +12,7 @@ function App() {
       .catch((error) => {
         console.error('Error:', error);
       });
-  })
+  }, [])
   return (
     <div className="App">
       <CardList posts={posts} />
