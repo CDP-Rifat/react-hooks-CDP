@@ -6,6 +6,8 @@ import Comment from "../../components/Comment/comment.component";
 
 function PostPage() {
     const [comments, setComments] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const { state } = useLocation();
     const { post } = state;
 
@@ -14,6 +16,7 @@ function PostPage() {
             .then(res => res.json())
             .then(comnts => {
                 setComments(comnts)
+                setIsLoaded(true)
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -24,10 +27,12 @@ function PostPage() {
             <Post post={post} />
             <h3>Comments</h3>
             <div className="comments-container">
+                {!isLoaded && <h2> Loading.... </h2>}
+
                 {comments.map((comms, index) =>
                     <Comment comment={comms} key={index} />)}
             </div>
-        </div>
+        </div >
     )
 }
 
