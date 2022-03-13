@@ -8,12 +8,9 @@ import 'normalize.css';
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />}></Route>
-    </Routes>
-    <Routes>
-      <Route path='/post' element={<PostPage />}></Route>
+      <Route exact path='/' element={<App />}></Route>
+      <Route exact path='/post' element={<PostPage />}></Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 );
-

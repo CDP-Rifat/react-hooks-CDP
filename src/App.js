@@ -12,9 +12,12 @@ function App() {
       .catch((error) => {
         console.error('Error:', error);
       });
-  }, [])
+  }, []) // [] -> componentDidMount -> (executes (once) first time )
+
+
   return (
     <div className="App">
+      <h1>Placeholder Posts</h1>
       <CardList posts={posts} />
     </div>
   );
